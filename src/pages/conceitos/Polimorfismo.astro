@@ -1,0 +1,50 @@
+---
+import CodeBlock from "../../components/CodeBlock.astro";
+---
+<div class="mt-5">
+    <h1 class="text-5xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        3. Polimorfismo
+    </h1>
+
+    <p>O polimorfismo é um dos pilares da POO e permite que um objeto seja tratado de várias maneiras, dependendo do contexto em que é utilizado. Isso promove a flexibilidade e extensibilidade do código.</p>
+
+    <h1 class="mt-5 text-xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        Como funciona o Polimorfismo?
+    </h1>
+
+    <p>No polimorfismo, um objeto de uma classe específica pode se comportar como um objeto de sua superclasse ou como um objeto de uma interface que ela implementa. Isso permite que métodos sejam chamados de maneira polimórfica, ou seja, um método pode ter diferentes implementações dependendo do tipo do objeto em questão.</p>
+
+    <p class="mb-3 font-bold">Exemplo:</p>
+
+    <CodeBlock language="java" content={`public interface Animal {
+    void fazerBarulho();
+  }
+  
+  public class Cachorro implements Animal {
+      @Override
+      public void fazerBarulho() {
+          System.out.println("O cachorro está latindo.");
+      }
+  }
+  
+  public class Gato implements Animal {
+      @Override
+      public void fazerBarulho() {
+          System.out.println("O gato está miando.");
+      }
+  }
+  
+  public class Main {
+      public static void main(String[] args) {
+          Animal animal1 = new Cachorro();
+          Animal animal2 = new Gato();
+  
+          animal1.fazerBarulho(); // Saída: O cachorro está latindo.
+          animal2.fazerBarulho(); // Saída: O gato está miando.
+      }
+  }
+  `}/>
+
+    <p>Neste exemplo, a interface "Animal" define o método "fazerBarulho()". As classes "Cachorro" e "Gato" implementam essa interface e fornecem suas próprias implementações para o método "fazerBarulho()". O polimorfismo é demonstrado quando objetos das classes "Cachorro" e "Gato" são tratados como objetos do tipo "Animal" e o método "fazerBarulho()" é chamado de maneira polimórfica.</p>
+
+</div>

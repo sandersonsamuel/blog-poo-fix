@@ -1,0 +1,55 @@
+---
+import CodeBlock from "../../components/CodeBlock.astro";
+---
+<div class="mt-5">
+    <h1 class="text-5xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        4. Encapsulamento
+    </h1>
+
+    <p>O encapsulamento é um dos princípios fundamentais da POO e consiste em ocultar os detalhes de implementação de uma classe, expondo apenas uma interface para interação com objetos dessa classe. Isso promove a segurança e a manutenibilidade do código.</p>
+
+    <h1 class="mt-5 text-xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        Como funciona o encapsulamento?
+    </h1>
+
+    <p>No encapsulamento, os atributos de uma classe são declarados como privados, o que significa que eles só podem ser acessados e modificados por métodos internos da classe. Isso impede o acesso direto aos atributos de fora da classe, garantindo que seu estado seja controlado de maneira segura.</p>
+
+    <h3 class="mt-3 font-bold">Exemplo:</h3>
+
+    <CodeBlock language="java" content={`
+    public class Carro {
+      // Atributos privados
+      private String marca;
+      private String modelo;
+      private int ano;
+  
+      // Métodos públicos para acessar e modificar os atributos
+      public String getMarca() {
+          return marca;
+      }
+  
+      public void setMarca(String marca) {
+          this.marca = marca;
+      }
+  
+      public String getModelo() {
+          return modelo;
+      }
+  
+      public void setModelo(String modelo) {
+          this.modelo = modelo;
+      }
+  
+      public int getAno() {
+          return ano;
+      }
+  
+      public void setAno(int ano) {
+          this.ano = ano;
+      }
+  }
+    `}/>
+
+    <p>Neste exemplo, os atributos "marca", "modelo" e "ano" são declarados como privados e só podem ser acessados ou modificados por meio dos métodos públicos "get" e "set". Isso encapsula o estado interno da classe "Carro" e garante que seu acesso seja controlado de maneira segura.</p>
+
+</div>

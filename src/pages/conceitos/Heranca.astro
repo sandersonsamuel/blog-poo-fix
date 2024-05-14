@@ -1,0 +1,46 @@
+---
+import CodeBlock from "../../components/CodeBlock.astro";
+---
+<div class="mt-5">
+    <h1 class="text-5xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        2. Herança
+    </h1>
+
+    <p>A herança é um conceito fundamental na POO que permite que uma classe (subclasse) herde atributos e métodos de outra classe (superclasse). Isso promove a reutilização de código e permite a criação de hierarquias de classes.</p>
+
+
+    <h1 class="mt-5 text-xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        Como funciona a herança?</h1>
+
+    <p>Na herança, uma classe pode estender outra classe, o que significa que a subclasse herda todos os atributos e métodos da superclasse. A subclasse pode então adicionar novos atributos e métodos ou substituir os existentes conforme necessário.</p>
+
+    <p class="b-3 font-bold">Exemplo:</p>
+
+    <CodeBlock language="java" content={`
+  public class Animal {
+    public void comer() {
+      System.out.println("O animal está comendo.");
+    }
+    // Metodos: comer()
+  }
+
+    public class Cachorro extends Animal {
+      public void latir() {
+        System.out.println("O cachorro está latindo.");
+      }
+      // Metodos: comer(), latir()
+    }
+
+    public class Gato extends Animal {
+      public void miar() {
+        System.out.println("O gato está miando.");
+      }
+      // Metodos: comer(), miar()
+    }
+    
+    // Cachorro e Gato herdam de Animal o método comer()
+  `} />
+
+    <p>Neste exemplo, a classe "Cachorro" e a classe "Gato" estendem a classe "Animal", herdando o método "comer()". Além disso, cada uma dessas subclasses possui seus próprios métodos específicos ("latir()" para "Cachorro" e "miar()" para "Gato").</p>
+
+</div>

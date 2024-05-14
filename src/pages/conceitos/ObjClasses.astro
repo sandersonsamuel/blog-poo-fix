@@ -1,0 +1,78 @@
+---
+
+import CodeBlock from "../../components/CodeBlock.astro";
+
+---
+
+
+<div class="mt-5">
+    <h1 class="text-5xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">
+        1. Objetos e Classes
+    </h1>
+
+    <p class="mb-3">Na Programação Orientada a Objetos (POO), objetos e classes desempenham um papel fundamental. Vamos explorar esses conceitos essenciais que formam a base da POO em Java.</p>
+
+    <h3 class="text-xl font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">Classes: O Molde para Objetos</h3>
+
+    <p class="mb-3">As classes são como moldes ou blueprints que definem a estrutura e o comportamento dos objetos. Elas contêm atributos (também conhecidos como campos) para representar o estado e métodos para definir o comportamento dos objetos.</p>
+
+    <p class="mb-3 font-bold">Exemplo:</p>
+
+    <CodeBlock language="java" content={`public class Carro {
+    // Atributos
+    String marca;
+    String modelo;
+    int ano;
+
+    // Métodos
+    public void ligar() {
+        System.out.println("O carro está ligado.");
+    }
+
+    public void desligar() {
+        System.out.println("O carro está desligado.");
+}`} />
+
+    <p>No exemplo acima, Carro é uma classe que define as características de um carro, como marca, modelo e ano. Além disso, ela possui métodos ligar() e desligar() para controlar o estado do carro.</p>
+
+    <p class="mb-3 font-bold">Exemplo:</p>
+
+    <div class="flex gap-5 items-center my-3">
+        <img src="https://i.pinimg.com/originals/27/b1/c0/27b1c02815e1e3034291c6b7c4271872.gif" class="w-96">
+        <ul>
+            <li>
+                Marca: Fiat
+            </li>
+            <li>
+                Modelo: Uno
+            </li>
+            <li>
+                Ano: 2005
+            </li>
+        </ul>
+    </div>
+
+    <p class="mb-3 font-bold">Em codigo:</p>
+
+    <CodeBlock language="java" content={`
+  public class Main {
+    public static void main(String[] args) {
+        // Criando objetos (instanciando a classe Carro)
+        Carro meuCarro = new Carro();
+        meuCarro.marca = "Fiat";
+        meuCarro.modelo = "Uno";
+        meuCarro.ano = 2005;
+
+        // Chamando métodos do objeto
+        meuCarro.ligar();
+    }
+}
+`} />
+
+    <p>Neste exemplo, meuCarro é um objeto da classe Carro. Atribuímos valores aos seus atributos e chamamos o método ligar() para iniciar o carro.</p>
+
+    <h3 class="text-xl mt-2 font-semibold bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent">Conclusão</h3>
+
+    <p>Em resumo, classes definem a estrutura e o comportamento dos objetos, enquanto objetos são instâncias específicas dessas classes, representando entidades individuais. Entender a relação entre objetos e classes é fundamental para a compreensão da Programação Orientada a Objetos e seu uso eficaz na linguagem Java.</p>
+
+</div>
